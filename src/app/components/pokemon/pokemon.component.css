@@ -1,0 +1,102 @@
+
+.container {
+    height: 100%;
+    max-height: 712px;
+    width: 100%;
+    max-width: 438px;
+
+}
+
+.pokemon {
+    height: 100%;
+    width: 100%;
+    padding-top: 1em;
+    background-color: rgb(86, 190, 155);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokemonHeader {
+    height: 50%;
+    width: 100%;
+}
+
+.pokemonHeader h2 {
+    color: white;
+    margin-left: 1em;
+    margin-bottom: 0.7em;
+}
+
+#type {
+    width: 100%;
+    margin-left: 3em;
+    margin-top: 0.4em;
+}
+
+#type span {
+    margin-left: 1em;
+    background-color: rgb(85, 146, 148);
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 20px;
+}
+
+.pokemonImg {
+    max-height: 85%;
+    max-width: 80%;
+    display: flex;
+    margin: 0 auto;
+    z-index: 0;
+}
+
+.pokemonStatus {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 1.5em;
+}
+
+.buttonsType {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.buttonsType button {
+    margin-left: 2em;
+    padding-bottom: 0.8em;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.clickAbout {
+    border-bottom: 1px solid rgb(22, 95, 163);
+}
+
+.buttonsType button:hover {
+    border-bottom: 1px solid rgb(22, 95, 163);
+}
+
+.about {
+    height: 50%;
+    margin-left: 1.5em;
+}
+
+.about p{
+    margin-top: 1.3em;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.about h2 {
+    margin-top: 0.8em;
+}

@@ -1,0 +1,14 @@
+<header>
+    <h1>Pokedex</h1>
+
+    <form (ngSubmit)="submit(form)" #form="ngForm">
+        <div class="search">
+            <label for="search">
+                <img src="../../../../assets/magnifying-glass.png" alt="Lupa">
+            </label>
+    
+            <input id="search" name="name" type="text" placeholder="Digite o nome do Pokemon" ngModel>
+        </div>
+    </form>
+
+</header>

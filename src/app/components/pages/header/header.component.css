@@ -1,0 +1,35 @@
+header {
+    display: flex;
+    max-width: 440px;
+    justify-content: space-between;
+    background-color: rgb(86, 190, 155);
+}
+
+form {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.search {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    margin-right: 0.8em;
+}
+
+img {
+    height: 30px;
+    position: absolute;
+    top: 7px;
+    left: 5px
+}
+
+input {
+    height: 100%;
+    width: 100%;
+    padding-left: 3em;
+    border-radius: 12px;
+}

@@ -1,0 +1,40 @@
+<div class="container">
+    <app-header (search)="getPokemon($event)"></app-header>
+        <div class="pokemon">
+            <div class="pokemonHeader">
+                <h2>{{pokemonName}}</h2>
+
+                <div id="type">
+                    <span>Grass</span>
+                    <span>Poison</span>
+                </div>
+    
+                <img 
+                class="pokemonImg"
+                src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png">
+            </div>
+
+            <div class="pokemonStatus">
+                <div class="buttonsType">
+                    <button (click)="about = true " [ngClass]="{'clickAbout': about}">About</button>
+                    <button>Base Stats</button>
+                    <button>Evolution</button>
+                    <button>Moves</button>
+                </div>
+
+                <div *ngIf="about" class="about">
+                    <p>Species <span>{{pokemonAbout?.species}}</span></p>
+                    <p>Height <span>{{pokemonAbout?.height}} cm</span></p>
+                    <p>Weight <span>{{pokemonAbout?.weight}} lbs</span></p>
+                    <p>Abilities  <span>{{ pokemonAbout?.abilities}}</span></p>
+                    
+                    <h2>Breeding</h2>
+
+                    <p>Gender <span>87.5 M</span></p>
+                    <p>Egg Groups <span>Monster</span></p>
+                    <p>Egg Cycle <span>Grass</span></p>
+                </div>
+            </div>
+
+        </div>
+</div>
