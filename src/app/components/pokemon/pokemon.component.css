@@ -33,6 +33,7 @@
     width: 100%;
     margin-left: 3em;
     margin-top: 0.4em;
+    display: flex;
 }
 
 #type span {
@@ -44,11 +45,10 @@
 }
 
 .pokemonImg {
-    max-height: 85%;
+    max-height: 80%;
     max-width: 80%;
     display: flex;
     margin: 0 auto;
-    z-index: 0;
 }
 
 .pokemonStatus {
@@ -100,3 +100,32 @@
 .about h2 {
     margin-top: 0.8em;
 }
+
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label{
+    min-width: 25px;
+}
+
+/*Input Range Style*/
+
+#slider {
+    appearance: none;
+    width: 70%;
+    height: 5px;
+    border-radius: 20px;
+    background-color: red;
+}
+
+#eachStatus {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* O css seletor do input[range] */
+/* #slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background-color: aqua;
+} */

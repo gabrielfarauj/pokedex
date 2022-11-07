@@ -1,0 +1,14 @@
+html {
+    width: 100%;
+}
+
+div {
+    width: 400px;
+}
+
+.my-custom-class {
+    padding: 5px;
+    border-width: 1px;
+    border-style: solid;
+    background-color: red;
+  }

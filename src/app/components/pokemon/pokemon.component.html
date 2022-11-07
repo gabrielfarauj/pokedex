@@ -1,40 +1,51 @@
 <div class="container">
     <app-header (search)="getPokemon($event)"></app-header>
-        <div class="pokemon">
-            <div class="pokemonHeader">
-                <h2>{{pokemonName}}</h2>
+    <div class="pokemon">
+        <div class="pokemonHeader">
+            <h2>{{pokemonAbout?.name}}</h2>
 
-                <div id="type">
-                    <span>Grass</span>
-                    <span>Poison</span>
-                </div>
-    
-                <img 
-                class="pokemonImg"
-                src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png">
+            <div id="type">
+                <span *ngFor="let type of pokemonAbout?.type" class={{type}}>{{type}} </span>
             </div>
 
-            <div class="pokemonStatus">
-                <div class="buttonsType">
-                    <button (click)="about = true " [ngClass]="{'clickAbout': about}">About</button>
-                    <button>Base Stats</button>
-                    <button>Evolution</button>
-                    <button>Moves</button>
-                </div>
-
-                <div *ngIf="about" class="about">
-                    <p>Species <span>{{pokemonAbout?.species}}</span></p>
-                    <p>Height <span>{{pokemonAbout?.height}} cm</span></p>
-                    <p>Weight <span>{{pokemonAbout?.weight}} lbs</span></p>
-                    <p>Abilities  <span>{{ pokemonAbout?.abilities}}</span></p>
-                    
-                    <h2>Breeding</h2>
-
-                    <p>Gender <span>87.5 M</span></p>
-                    <p>Egg Groups <span>Monster</span></p>
-                    <p>Egg Cycle <span>Grass</span></p>
-                </div>
-            </div>
-
+            <img class="pokemonImg"
+                src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/{{pokemonAbout?.id ? pokemonAbout?.id : '001'}}.png">
         </div>
+
+        <div class="pokemonStatus"> 
+            <mat-tab-group>
+                <mat-tab label="About">
+                    <ng-template mat-tab-label>
+                        <span>About</span>
+                    </ng-template>
+                    <div class="about">
+                        <p>Species <span>{{pokemonAbout?.species}}</span></p>
+                        <p>Height <span>{{pokemonAbout?.height}}</span></p>
+                        <p>Weight <span>{{pokemonAbout?.weight}} lbs</span></p>
+                        <p>Abilities <span>{{pokemonAbout?.abilities}}</span></p>
+
+                        <h2>Breeding</h2>
+
+                        <p>Gender <span>?</span></p>
+                        <p>Egg Groups <span>{{pokemonAbout?.monsterEggGroup}}</span></p>
+                        <p>Habitat <span>{{pokemonAbout?.biome}}</span></p>
+                    </div>
+                </mat-tab>
+
+                <mat-tab label="Status">
+                    <div class="AllStatus">
+                        <div id="eachStatus">
+                            <p>HP</p>
+                            <span>88</span>
+                            <input type="range" min="0" max="50" value="0" id="slider">
+                        </div>
+                        
+                    </div>
+                </mat-tab>
+                <mat-tab label="Evolution"></mat-tab>
+                <mat-tab label="Moves"></mat-tab>
+            </mat-tab-group>
+        </div>
+
+    </div>
 </div>

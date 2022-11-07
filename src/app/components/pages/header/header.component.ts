@@ -15,6 +15,6 @@ export class HeaderComponent implements OnInit {
   }
 
   submit(form : any){
-    this.search.emit(form.value.name)
+    this.search.emit((form.value.name.toLowerCase()));
   }
 }
